@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  become: yes
+  tasks:
+   - name: cop
+     copy:
+      src: jio
+      dest: /opt
+     

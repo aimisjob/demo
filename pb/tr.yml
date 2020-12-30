@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  become: yes
+  tasks: 
+   - name: var
+     command: cat llll
+     register: hio
+   - debug:
+      msg: "{{hio}}"

@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: copying files
+    copy:
+     src: /opt/jenkins-2.0-1.1.noarch.rpm 
+     dest: /opt
+  - name: insta
+    yum: 
+     name: /opt/jenkins-2.0-1.1.noarch.rpm
+  - name: se
+    service:
+     name: jenkins
+     state: started

@@ -1,0 +1,4 @@
+- name: in file
+  yum: 
+   name: git
+ 

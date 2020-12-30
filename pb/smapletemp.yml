@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+   - name: cc
+     template: 
+      src: jio.j2
+      dest: /opt/mio  
+     

@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  become: yes
+  tasks: 
+   - include_tasks: install_{{ansible_os_family}}.yml
+     when: ansible_os_family == "RedHat"
+   - include_tasks: install_{{ansible_os_family}}.yml
+     when: ansible_os_family == "Debain"
+   
